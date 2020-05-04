@@ -1,0 +1,25 @@
+enum Gender {
+    Male
+    Female
+}
+type Person {
+    id: ID!
+    firstName: String
+    lastName: String
+    email: String
+    gender: Gender
+    country: String
+    city: String
+    postalCode: String
+    address: String
+    phone: String
+}
+
+type Query {
+    getPersons: [Person]
+    getPersonById (id: Int): Person
+}
+
+type Mutation {
+    addPerson (firstName: String, lastName: String): Person
+}

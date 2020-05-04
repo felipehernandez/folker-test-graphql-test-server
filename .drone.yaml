@@ -1,0 +1,20 @@
+kind: pipeline
+name: graphql-test-server
+
+steps:
+  - name: bake
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: DOCKERHUB.USER
+      password:
+        from_secret: DOCKERHUB.PASSWORD
+      repo: folkertest/graphql-test-server
+      tags:
+        - latest
+        - "0.1.${DRONE_BUILD_NUMBER}"
+    when:
+      branch:
+        - master
+        - release
+      event: push

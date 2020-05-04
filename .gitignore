@@ -1,0 +1,21 @@
+# Exclude files for git
+
+# Folders
+
+# File extensions
+*.class
+*.jar
+*.pyc
+
+#Specific files
+.project
+.classpath
+kubernetes.yaml
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+
