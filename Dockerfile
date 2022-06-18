@@ -10,7 +10,7 @@ RUN ls -l target/
 
 ###########
 
-FROM openjdk:11-slim
+FROM openjdk:20-slim
 
 RUN apt-get update && apt-get install -y curl
 
